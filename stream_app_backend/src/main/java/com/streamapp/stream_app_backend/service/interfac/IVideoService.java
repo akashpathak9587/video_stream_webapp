@@ -1,5 +1,4 @@
-package service.interfac;
-
+package com.streamapp.stream_app_backend.service.interfac;
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
