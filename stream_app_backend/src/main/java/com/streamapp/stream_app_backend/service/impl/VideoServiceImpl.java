@@ -1,7 +1,6 @@
 package com.streamapp.stream_app_backend.service.impl;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,7 +17,6 @@ import com.streamapp.stream_app_backend.entity.Video;
 import com.streamapp.stream_app_backend.repository.VideoRepository;
 import com.streamapp.stream_app_backend.service.interfac.IVideoService;
 
-import ch.qos.logback.core.util.StringUtil;
 import jakarta.annotation.PostConstruct;
 
 @Service
@@ -74,19 +72,16 @@ public class VideoServiceImpl implements IVideoService {
 
     @Override
     public Video get(String videoId) {
-        // TODO Auto-generated method stub
         return videoRepository.findById(videoId).orElseThrow(() -> new RuntimeException("Video not found"));
     }
 
     @Override
     public Video getByTitle(String title) {
-        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public List<Video> getAll() {
-        // TODO Auto-generated method stub
         return videoRepository.findAll();
     }
 
